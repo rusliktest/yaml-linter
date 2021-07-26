@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION="v1.7"
+VERSION="v1.8"
 
 git add . & 
 git commit -m "release ${VERSION}" & 

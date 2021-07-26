@@ -9,5 +9,11 @@ outputs:
   time: # id of output
     description: 'The time we greeted you'
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v1
+
+    - name: yaml-lint
+      uses: ibiqlik/action-yamllint@v3
+      with:
+        config_file: .yamllint.yml
