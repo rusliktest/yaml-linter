@@ -11,9 +11,10 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v1
+    - run: lint.yaml
+    # - uses: actions/checkout@v1
 
-    - name: yaml-lint
-      uses: ibiqlik/action-yamllint@v3
-      with:
-        config_file: .yamllint.yml
+    # - name: yaml-lint
+    #   uses: ibiqlik/action-yamllint@v3
+    #   with:
+    #     config_file: .yamllint.yml
